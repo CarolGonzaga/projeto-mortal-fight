@@ -1,6 +1,6 @@
 # Projeto - Mortal Fight in Turns
 - Meu Terceiro Projeto 
-- Joguinho de Luta em Turnos
+- Jogo de Luta em Turnos
 
 <br/>
 
