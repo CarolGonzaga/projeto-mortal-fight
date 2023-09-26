@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>MFT - Mortal Fight in Turns</title>
 </head>
+
 <body>
-    <header></header>
     <main>
         <div class="cenario">
             <div class="barra-status">
@@ -19,6 +20,9 @@
                     <div class="medidor-vidaP1">
                         <img src="./assets/images/nomeP1.png" alt="placa escrito Player 1">
                         <img src="./assets/images/vida5.png" alt="medidor de vidas do jogador 1" id="contador-vidas-p1">
+                    </div>
+                    <div class="placar-p1">
+                        <p class="vitoria">VITÓRIAS <span id="numero-vitoria-p1">0</span></p>
                     </div>
                 </div>
                 <div class="status-meio">
@@ -33,10 +37,58 @@
                         <img src="./assets/images/nomeP2.png" alt="placa escrito Player 2">
                         <img src="./assets/images/vida5.png" alt="medidor de vidas do jogador 2" id="contador-vidas-p2">
                     </div>
+                    <div class="placar-p2">
+                        <p class="vitoria">VITÓRIAS <span id="numero-vitoria-p2">0</span></p>
+                    </div>
                 </div>
             </div>
             <div class="tela">
-                <input type="text" id="console" value="">
+                <input type="text" id="console">
+                <div class="botoes">
+                    <div class="botoes-p1">
+                        <div>
+                            <img src="./assets/images/botao-atacar.png" alt="Botão de atacar" id="botao-atacar-p1" class="btn">
+                        </div>
+                        <div>
+                            <img src="./assets/images/botao-pocao.png" alt="Botão de curar" id="botao-pocao-p1" class="btn">
+                            <img src="./assets/images/marcador-pocao3.png" alt="Marcador de poção de vida do player 1"
+                                id="marcador-pocao-p1" class="btn">
+                        </div>
+                        <div>
+                            <img src="./assets/images/botao-veneno.png" alt="Botão de envenenar" id="botao-veneno-p1" class="btn">
+                            <img src="./assets/images/marcador-veneno3.png" alt="Marcador de poção de veneno do player 1"
+                                id="marcador-veneno-p1" class="btn">
+                        </div>
+                    </div>
+                    <div class="console">
+                        <div class="vez-p1">
+                            <img src="./assets/images/seta-p1-1.png" alt="seta apontando para a esquerda" id="seta-p1">
+                        </div>
+                        <div class="meio">
+                            <p>REINICIAR PARTIDA?</p>
+                            <div class="btn-reinicio">
+                                <span id="reiniciar-sim">SIM</span>
+                                <span id="reiniciar-nao">NÃO</span>
+                            </div>
+                        </div>
+                        <div class="vez-p2">
+                            <img src="./assets/images/seta-p2-1.png" alt="seta apontando para a direita">
+                        </div>
+                    </div>
+                    <div class="botoes-p2">
+                        <div>
+                            <img src="./assets/images/botao-atacar.png" alt="Botão de atacar" id="botao-atacar-p2" class="btn">
+                        </div>
+                        <div>
+                            <img src="./assets/images/botao-pocao.png" alt="Botão de curar" id="botao-pocao-p2" class="btn">
+                            <img src="./assets/images/marcador-pocao3.png" alt="" id="marcador-pocao-p2" class="btn">
+                        </div>
+                        <div>
+                            <img src="./assets/images/botao-veneno.png" alt="Botão de envenenar" id="botao-veneno-p2" class="btn">
+                            <img src="./assets/images/marcador-veneno3.png" alt="" id="marcador-veneno-p2" class="btn">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="lutadores">
                 <div class="lutador-p1">
@@ -47,65 +99,11 @@
                 </div>
             </div>
         </div>
-        <div class="botoes">
-            <div class="botoes-p1">
-                <img src="./assets/images/botao-atacar.png" alt="Botão de atacar" id="botao-atacar-p1">
-                <div>
-                    <img src="./assets/images/botao-pocao.png" alt="Botão de curar" id="botao-pocao-p1">
-                    <img src="./assets/images/marcador-pocao3.png" alt="Marcador de poção de vida do player 1" id="marcador-pocao-p1">
-                </div>
-                <div>
-                    <img src="./assets/images/botao-veneno.png" alt="Botão de envenenar" id="botao-veneno-p1">
-                    <img src="./assets/images/marcador-veneno3.png" alt="Marcador de poção de veneno do player 1" id="marcador-veneno-p1">
-                </div>
-            </div>
-            <div class="console">
-                <div class="vez-p1">
-                    <img src="./assets/images/seta-p1-1.png" alt="seta apontando para a esquerda" id="seta-p1">
-                </div>
-                <div class="meio">
-                    <p>REINICIAR PARTIDA?</p>
-                    <span id="reiniciar-sim">SIM</span><span> </span><span id="reiniciar-nao">NÃO</span>
-                </div>
-                <div class="vez-p2">
-                    <img src="./assets/images/seta-p2-1.png" alt="seta apontando para a direita">
-                </div>
-            </div>
-            <div class="botoes-p2">
-                <img src="./assets/images/botao-atacar.png" alt="Botão de atacar" id="botao-atacar-p2">
-                <div>
-                    <img src="./assets/images/botao-pocao.png" alt="Botão de curar" id="botao-pocao-p2">
-                    <img src="./assets/images/marcador-pocao3.png" alt="" id="marcador-pocao-p2">
-                </div>
-                <div>
-                    <img src="./assets/images/botao-veneno.png" alt="Botão de envenenar" id="botao-veneno-p2">
-                    <img src="./assets/images/marcador-veneno3.png" alt="" id="marcador-veneno-p2">
-                </div>
-            </div>
-        </div>
-        <div class="placar">
-                
-            <div class="placar-p1">
-                <h1>Player 1</h1>
-                <div class="texto">
-                    <p class="vitoria">Vitórias: <span id="numero-vitoria-p1">0</span></p>
-                    <p class="derrota">Derrotas: <span id="numero-derrota-p1">0</span></p>
-                </div>
-            </div>
-
-            <div class="placar-p2">
-                <h1>Player 2</h1>
-                <div class="texto">
-                    <p class="vitoria">Vitórias: <span id="numero-vitoria-p2">0</span></p>
-                    <p class="derrota">Derrotas: <span id="numero-derrota-p2">0</span></p>
-                </div>
-                </div>
-            </div>
-        </div>
     </main>
     <footer>
         <p>Copyright© 2023 Carol Gonzaga - Direitos Reservados.</p>
     </footer>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

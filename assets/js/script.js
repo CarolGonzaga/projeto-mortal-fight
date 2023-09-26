@@ -308,13 +308,6 @@ function contadorVitDer() {
         }
         
         player2.vitorias += 1;
-        player1.derrotas += 1;
-        
-        vitoriasP1.innerHTML = player1.vitorias;
-        derrotasP1.innerHTML = player1.derrotas;
-
-        vitoriasP2.innerHTML = player2.vitorias;
-        derrotasP2.innerHTML = player2.derrotas;
     
     } else if (player2.vida == 0) {
         
@@ -327,14 +320,9 @@ function contadorVitDer() {
         }
 
         player1.vitorias += 1
-        player2.derrotas += 1;
-        
-        vitoriasP1.innerHTML = player1.vitorias;
-        derrotasP1.innerHTML = player1.derrotas;
-
-        vitoriasP2.innerHTML = player2.vitorias;
-        derrotasP2.innerHTML = player2.derrotas;
     }
+    vitoriasP1.innerHTML = player1.vitorias;
+    vitoriasP2.innerHTML = player2.vitorias;
 }
 
 function quemJoga(jogador) {
