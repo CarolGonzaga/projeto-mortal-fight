@@ -18,7 +18,7 @@ var botaoVenP2 = document.querySelector("#botao-veneno-p2");
 
 // ************* OUTROS ELEMENTOS **************
 
-var reinicio = document.querySelector(".meio");
+var reinicio = document.querySelector(".popup");
 var reiniciarSim = document.querySelector("#reiniciar-sim");
 var reiniciarNao = document.querySelector("#reiniciar-nao");
 

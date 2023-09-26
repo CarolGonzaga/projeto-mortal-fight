@@ -4,13 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>MFT - Mortal Fight in Turns</title>
 </head>
 
 <body>
     <main>
+        <section class="popup">
+            <div id="reinicio">
+                <p>REINICIAR PARTIDA?</p>
+                <div class="btn-reinicio">
+                    <span id="reiniciar-sim">SIM</span>
+                    <span id="reiniciar-nao">NÃO</span>
+                </div>
+            </div>
+        </section>
         <div class="cenario">
             <div class="barra-status">
                 <div class="status-p1">
@@ -50,26 +59,19 @@
                             <img src="./assets/images/botao-atacar.png" alt="Botão de atacar" id="botao-atacar-p1" class="btn">
                         </div>
                         <div>
-                            <img src="./assets/images/botao-pocao.png" alt="Botão de curar" id="botao-pocao-p1" class="btn">
                             <img src="./assets/images/marcador-pocao3.png" alt="Marcador de poção de vida do player 1"
                                 id="marcador-pocao-p1" class="btn">
+                            <img src="./assets/images/botao-pocao.png" alt="Botão de curar" id="botao-pocao-p1" class="btn">
                         </div>
                         <div>
-                            <img src="./assets/images/botao-veneno.png" alt="Botão de envenenar" id="botao-veneno-p1" class="btn">
                             <img src="./assets/images/marcador-veneno3.png" alt="Marcador de poção de veneno do player 1"
                                 id="marcador-veneno-p1" class="btn">
+                            <img src="./assets/images/botao-veneno.png" alt="Botão de envenenar" id="botao-veneno-p1" class="btn">
                         </div>
                     </div>
                     <div class="console">
                         <div class="vez-p1">
                             <img src="./assets/images/seta-p1-1.png" alt="seta apontando para a esquerda" id="seta-p1">
-                        </div>
-                        <div class="meio">
-                            <p>REINICIAR PARTIDA?</p>
-                            <div class="btn-reinicio">
-                                <span id="reiniciar-sim">SIM</span>
-                                <span id="reiniciar-nao">NÃO</span>
-                            </div>
                         </div>
                         <div class="vez-p2">
                             <img src="./assets/images/seta-p2-1.png" alt="seta apontando para a direita">
