@@ -209,7 +209,7 @@ body {
 .lutadores {
     margin: auto;
     max-width: 90%;
-    min-height: 60%;
+    height: 60%;
     display: flex;
     flex-direction: row;
     align-items: end;
@@ -227,8 +227,8 @@ body {
 /* BOTOES DE AÇÃO */
 .botoes {
     position: absolute;
-    top: 70%;
-    width: 1200px;
+    top: calc(50%, -50%);
+    width: 100%;
     margin: auto;
     padding: 10px 0px;
     border-radius: 20px;
@@ -301,7 +301,7 @@ footer {
     .popup {
         transform: translate(-50%, -150%);
     }
-    
+
     .cenario {
         position: relative;
         background-size: 130% 100%;
@@ -417,8 +417,84 @@ footer {
 }
 
 /* Para telas ainda menores (como smartphones) */
-@media screen and (max-width: 630px) and (orientation: landscape) {
-    .ficha-p1 img {
-        max-width: 80px;
+@media (max-height: 570px) {
+
+    .cenario {
+        position: relative;
+        background-image: url('../images/cenario.jpg');
+        background-size: cover;
+        background-position: calc(50%, -50%);
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0px;
     }
+
+    .ficha-p1 img {
+        width: 100px;
+    }
+
+    .ficha-p1,
+    .ficha-p2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .ficha-p2 img {
+        width: 100px;
+    }
+
+    .medidor-vidaP1,
+    .medidor-vidaP2 {
+        width: 180px;
+        margin: 0;
+    }
+
+    .meio-texto {
+        position: absolute;
+        top: 57px;
+        left: calc(50%, -50%);
+        font-weight: bold;
+        color: rgb(212, 211, 209);
+        font-size: 1.2em;
+    }
+
+    .placar-p1,
+    .placar-p2 {
+        padding-top: 10px;
+    }
+
+    .tela {
+        position: fixed;
+        top: calc(40%);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+    }
+
+    .botoes {
+        position: absolute;
+        top: 55%;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 30% 70% 30%;
+    }
+
+    .console img {
+        width: 40px;
+    }
+
+    /* BONECOS */
+    .lutadores {
+        border: 3px solid green;
+    }
+
+    .lutador-p1 img, .lutador-p2 img {
+        border: 1px solid white;
+        height: 160px;
+        width: auto;
+    }
+
 }
