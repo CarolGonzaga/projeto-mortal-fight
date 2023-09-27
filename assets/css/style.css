@@ -299,7 +299,7 @@ footer {
 @media(max-width: 1200px) {
 
     .popup {
-        transform: translate(-50%, -150%);
+        transform: translate(-50%, -100%);
     }
 
     .cenario {
@@ -385,14 +385,14 @@ footer {
     }
 
     .botoes {
-        position: fixed;
+        max-height: calc(95vh - 140px);
+        position: absolute;
         bottom: 0;
-        width: 100%;
-        height: auto;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
         display: flex;
         justify-content: space-between;
-        padding: 0;
-        margin: 0;
     }
 
     .botoes-p1 {
@@ -426,7 +426,18 @@ footer {
 /* Para telas ainda menores (como smartphones) */
 @media (max-height: 570px) {
 
+    .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff93;
+        width: 250px;
+        padding: 20px 20px;
+    }
+
     .cenario {
+        position: relative;
         background-position: calc(50%, -50%);
         width: 100vw;
         height: 100vh;
@@ -434,7 +445,8 @@ footer {
         border-radius: 0px;
     }
 
-    .status-p1, .status-p2 {
+    .status-p1,
+    .status-p2 {
         padding: 0px;
         height: 45vh;
     }
@@ -491,26 +503,38 @@ footer {
     }
 
     .tela {
-        position: fixed;
+        position: absolute;
         top: calc(40%);
         left: 50%;
         transform: translate(-50%, -50%);
         width: 60%;
     }
 
+    #console {
+        font-size: .7em;
+    }
+
     .botoes {
+        max-height: calc(95vh - 140px);
         position: absolute;
         bottom: 0;
         width: 100vw;
         margin: 0;
         padding: 0;
-        display: grid;
-        grid-template-columns: 30% 70% 30%;
+    }
+
+    .botoes-p1,
+    .botoes-p2 {
+        padding: 5px;
     }
 
     .btn {
         min-height: 40px;
         max-height: 40px;
+    }
+
+    .console {
+        align-items: center;
     }
 
     .console img {
@@ -520,7 +544,7 @@ footer {
     .lutadores {
         max-height: calc(95vh - 150px);
         min-width: 100vw;
-        position: fixed;
+        position: absolute;
         bottom: 0;
         margin: 0;
         padding: 0 100px;
