@@ -296,7 +296,6 @@ footer {
     padding: 2px;
 }
 
-/* Para telas menores (como tablets) */
 @media(max-width: 1200px) {
 
     .popup {
@@ -359,19 +358,17 @@ footer {
     .lutadores {
         width: 100%;
         max-height: calc(95vh - 200px);
-        /* Altura máxima do cenario - altura dos lutadores */
         position: relative;
         overflow: hidden;
-        /* Adiciona uma barra de rolagem vertical caso necessário */
     }
 
     .lutadores {
-        max-height: calc(95vh - 200px); /* Altura máxima do cenario - altura dos lutadores */
+        max-height: calc(95vh - 200px);
         position: relative;
         overflow: hidden;
         display: flex;
-        justify-content: space-between; /* Centralizar as imagens com espaço entre elas */
-        align-items: center; /* Centralizar verticalmente */
+        justify-content: space-between;
+        align-items: center;
     }
 
     .lutador-p1,
@@ -384,6 +381,7 @@ footer {
     .lutador-p2 img {
         max-height: 100%;
         max-width: 100%;
+        object-fit: contain;
     }
 
     .botoes {
@@ -439,7 +437,6 @@ footer {
     .status-p1, .status-p2 {
         padding: 0px;
         height: 45vh;
-        border: 1px solid white;
     }
 
     .ficha-p1 img {
@@ -520,13 +517,11 @@ footer {
         width: 30px;
     }
 
-    /* BONECOS */
     .lutadores {
         max-height: calc(95vh - 150px);
         min-width: 100vw;
         position: fixed;
         bottom: 0;
-        border: 1px solid green;
         margin: 0;
         padding: 0 100px;
     }
@@ -539,9 +534,9 @@ footer {
 
     .lutador-p1 img,
     .lutador-p2 img {
-        max-height: 90%; /* Ajuste a altura máxima desejada */
+        max-height: 90%;
         width: auto;
         max-width: 100%;
-        object-fit: contain; /* Manter a proporção da imagem */
+        object-fit: contain;
     }
 }
