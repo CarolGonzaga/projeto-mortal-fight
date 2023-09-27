@@ -1,5 +1,5 @@
 # Projeto - Mortal Fight in Turns
-- Meu Terceiro Projeto 
+- Meu **Terceiro** Projeto 
 - Jogo de Luta em Turnos
 
 <br/>
