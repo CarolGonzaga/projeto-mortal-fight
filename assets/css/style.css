@@ -293,6 +293,7 @@ footer {
     text-align: center;
     color: #fff;
     font-size: .7em;
+    padding: 2px;
 }
 
 /* Para telas menores (como tablets) */
@@ -364,32 +365,36 @@ footer {
         /* Adiciona uma barra de rolagem vertical caso necessário */
     }
 
-    .lutador-p1 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding-left: 80px;
+    .lutadores {
+        max-height: calc(95vh - 200px); /* Altura máxima do cenario - altura dos lutadores */
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between; /* Centralizar as imagens com espaço entre elas */
+        align-items: center; /* Centralizar verticalmente */
     }
 
+    .lutador-p1,
     .lutador-p2 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding-right: 80px;
+        max-height: 100%;
+        width: auto;
     }
 
-    .lutadores img {
-        width: 200px;
+    .lutador-p1 img,
+    .lutador-p2 img {
+        max-height: 100%;
+        max-width: 100%;
     }
 
     .botoes {
+        position: fixed;
+        bottom: 0;
         width: 100%;
         height: auto;
         display: flex;
         justify-content: space-between;
         padding: 0;
         margin: 0;
-        margin-top: 20px;
     }
 
     .botoes-p1 {
@@ -401,6 +406,10 @@ footer {
     .console {
         align-items: baseline;
         width: 70%;
+    }
+
+    .console img {
+        width: 40px;
     }
 
     .botoes-p2 {
@@ -420,9 +429,6 @@ footer {
 @media (max-height: 570px) {
 
     .cenario {
-        position: relative;
-        background-image: url('../images/cenario.jpg');
-        background-size: cover;
         background-position: calc(50%, -50%);
         width: 100vw;
         height: 100vh;
@@ -430,33 +436,56 @@ footer {
         border-radius: 0px;
     }
 
+    .status-p1, .status-p2 {
+        padding: 0px;
+        height: 45vh;
+        border: 1px solid white;
+    }
+
     .ficha-p1 img {
-        width: 100px;
+        height: 80px;
     }
 
     .ficha-p1,
     .ficha-p2 {
         display: flex;
         justify-content: center;
+        padding: 0;
     }
 
     .ficha-p2 img {
-        width: 100px;
+        height: 80px;
     }
 
     .medidor-vidaP1,
     .medidor-vidaP2 {
         width: 180px;
+    }
+
+    .medidor-vidaP1>img {
+        width: 100px;
+        padding: 0;
         margin: 0;
+    }
+
+    .medidor-vidaP2>img {
+        width: 100px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .status-meio img {
+        width: 100px;
     }
 
     .meio-texto {
         position: absolute;
-        top: 57px;
-        left: calc(50%, -50%);
-        font-weight: bold;
-        color: rgb(212, 211, 209);
-        font-size: 1.2em;
+        width: 100%;
+        text-align: center;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: .8em;
     }
 
     .placar-p1,
@@ -474,7 +503,7 @@ footer {
 
     .botoes {
         position: absolute;
-        top: 55%;
+        bottom: 0;
         width: 100vw;
         margin: 0;
         padding: 0;
@@ -482,19 +511,37 @@ footer {
         grid-template-columns: 30% 70% 30%;
     }
 
+    .btn {
+        min-height: 40px;
+        max-height: 40px;
+    }
+
     .console img {
-        width: 40px;
+        width: 30px;
     }
 
     /* BONECOS */
     .lutadores {
-        border: 3px solid green;
+        max-height: calc(95vh - 150px);
+        min-width: 100vw;
+        position: fixed;
+        bottom: 0;
+        border: 1px solid green;
+        margin: 0;
+        padding: 0 100px;
     }
 
-    .lutador-p1 img, .lutador-p2 img {
-        border: 1px solid white;
-        height: 160px;
+    .lutador-p1,
+    .lutador-p2 {
+        max-height: 100%;
         width: auto;
     }
 
+    .lutador-p1 img,
+    .lutador-p2 img {
+        max-height: 90%; /* Ajuste a altura máxima desejada */
+        width: auto;
+        max-width: 100%;
+        object-fit: contain; /* Manter a proporção da imagem */
+    }
 }
